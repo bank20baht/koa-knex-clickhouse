@@ -4,11 +4,16 @@
   "description": "self learning in nipa internship (i know name of clickhouse db in nipa cloud)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "build": "tsc",
+    "start": "ts-node src/index.ts"
   },
   "author": "Nattapong Promthong",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   }
 }

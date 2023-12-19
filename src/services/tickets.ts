@@ -1,6 +1,10 @@
+import TicketRepository from "../repository/tickets";
+
 export class TicketService {
+  private ticketRepository = new TicketRepository();
+
   async listTickets(): Promise<string> {
-    return "List Tickets is work";
+    return await this.ticketRepository.listTicket();
   }
 
   async getTicket(id: number): Promise<string> {

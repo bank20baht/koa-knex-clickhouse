@@ -1,4 +1,9 @@
-let a: number = 30;
-let b: number = 20;
+import { createKoaServer, Controller, Get } from "routing-controllers";
+import { TicketController } from "./controllers/tickets";
+import Koa from "koa";
 
-console.log(a + b);
+const app: Koa = createKoaServer({
+  controllers: [TicketController],
+});
+
+app.listen(5000);
